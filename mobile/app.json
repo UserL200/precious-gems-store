@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Tshwane Bus Transit",
+    "slug": "tshwane-bus-transit",
+    "scheme": "tbt",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#003087"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NFCReaderUsageDescription": "We need NFC access to enable tap-to-pay for bus fares",
+        "com.apple.developer.nfc.readersession.formats": ["NDEF", "TAG"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#003087"
+      },
+      "permissions": ["android.permission.NFC"],
+      "useNextNotificationsApi": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withNFCConfig"
+    ]
+  }
+}
